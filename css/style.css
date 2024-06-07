@@ -34,13 +34,15 @@ body{
     padding:30px;
 }
 
-.book-button{
+.gradient-button{
     border-radius: 50px 50px 50px 50px;
     border-style: none;
     background-color:darkorchid;
     height: 50px;
     font-size: medium;
     padding:10px;
+    background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+    width: 300px;
 }
 
 .works-buttons{

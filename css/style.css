@@ -63,11 +63,9 @@
 .restaurant-card-text-icon{
     display: flex;
     flex-direction: row;
-    border: solid 1px red;
 }
 
 .restaurant-card-text{
-    border: solid 1px yellow;
     width: 80%;
 }
 
@@ -76,7 +74,6 @@
  height: 40px;
  align-self: center;
  justify-self: center;
- border: solid 1px blue;
 }
 
 

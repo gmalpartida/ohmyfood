@@ -1,106 +1,46 @@
-/* common styles !!!YOU DON'T NEED THEM */
-body {
-  background-color: #F1E9DA;
+.container {
+  width: 300px;
+  height: 100px;
+  padding: 0px;
+  margin: 0px;
 }
-body .container {
-  width: 850px;
-  margin: 70px auto 0px auto;
-  text-align: center;
-}
-body .container h1 {
-  font-family: "Droid Serif", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-body .container h1 span {
-  font-weight: 700;
-  font-style: italic;
-  color: #D90368;
-  border-bottom: 2px dashed currentColor;
-}
-body .container .button-effect {
-  padding: 30px 0px;
-}
-body .container .button-effect h2 {
-  font-family: "Droid Serif", serif;
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-body .container .button-effect a {
-  margin-right: 17px;
-}
-body .container .button-effect a:nth-child(2) {
-  background-color: #541388;
-}
-body .container .button-effect a:nth-child(3) {
-  background-color: #D90368;
-}
-body .container .button-effect a:nth-child(4) {
-  background-color: #104547;
-}
-body .container .button-effect a:nth-child(5) {
-  background-color: #4F000B;
-}
-body .container .button-effect a:nth-child(6) {
-  background-color: #F28123;
-}
-body .container .button-effect a:last-child {
-  margin-right: 0px;
-}
-
-/* button styles !!!YOU NEED THEM 
-!!!ALSO YOU NEED TO ADD FONTWESOME */
-.effect {
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  color: #fff;
-  text-transform: capitalize;
-  /* background-color: - add your own background-color */
-  font-family: "Roboto", sans-serif; /* put your font-family */
-  font-size: 18px;
-  padding: 20px 0px;
-  width: 150px;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-/* effect-2 styles */
-.effect.effect-2 {
-  transition: all 0.2s linear 0s;
-}
-.effect.effect-2:before {
-  content: "\f0a4";
-  font-family: FontAwesome;
-  font-size: 15px;
+.container .btn-shift {
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  right: -30px;
-  width: 30px;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 0px 6px 6px 0px;
-  transition: all 0.2s linear 0s;
-  text-align: center;
-}
-.effect.effect-2:hover {
-  text-indent: -30px;
-}
-.effect.effect-2:hover:before {
-  right: 0;
-  text-indent: 0px;
-}
-
-.btn-shift {
-  width: 150px;
-  height: 50px;
+  align-items: center;
   font-size: 20px;
+  transition: translate 1000ms ease-in-out 0.25s;
+  border-radius: 15px 15px 15px 15px;
+  overflow: hidden;
+  position: absolute;
+  padding: 0;
+  width: 300px;
+  height: 100px;
+  outline: auto;
+}
+.container .btn-shift span {
+  width: 0px;
+  height: 100px;
+  position: relative;
+  right: -130px;
+  border-radius: 0 15px 15px 0;
+  background-color: green;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.container .btn-shift span svg {
+  height: 30px;
+  width: 30px;
+}
+.container .btn-shift:hover span {
+  width: 100px;
+  transform: translateX(-100px);
+}
+.container .btn-shift:hover span svg {
+  transform: rotate(-360deg);
 }
 
 /*# sourceMappingURL=test-animation.css.map */

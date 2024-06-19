@@ -97,6 +97,7 @@ body{
 
 }
 
+
 .restaurants{
     padding: 30px;
     h2{
@@ -123,6 +124,12 @@ body{
         color:black
     }
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.restaurant-card:hover{
+    svg {
+        fill: linear-gradient(to top left, #9356DC, #FF79DA);
+    }
 }
 
 .restaurant-card-text-icon{

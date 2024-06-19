@@ -1,3 +1,7 @@
+body{
+    animation: do_fade_in 3s 1 forwards
+}
+
 .menu-logo--container{
     position: relative;
     z-index: 10;
@@ -47,6 +51,10 @@
         svg{
             height: 30px;
             width:30px;
+            -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+            filter: invert(100%);
+            height: 20px;
+
         }    
     }
     
@@ -57,8 +65,10 @@
         width: 100px;
         transform: translateX(-100px);
         right: -100px;
+        animation: do_shift 1s linear;
         svg{
-            transform: rotate(-360deg);
+            /* transform: rotate(-360deg); */
+            animation:do_rotate 2s linear;
         }
     }
 }
@@ -96,4 +106,37 @@
     justify-content: center;
     padding:30px;
 
+}
+
+@keyframes do_shift {
+    0% {
+      transform: translate(10px);
+    }
+    50% {
+      transform: translate(75px);
+    }
+    100%{
+        transform: translate(125px);
+    }
+  }
+
+@keyframes do_rotate {
+0% {
+    transform: rotate(0deg);
+}
+50% {
+    transform: rotate(180deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+}
+
+@keyframes do_fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

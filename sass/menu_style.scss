@@ -33,71 +33,69 @@ body{
 .menu-item-card{
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    height: 75px;
-    transition: translate 1000ms ease-in-out 0.25s;
+    align-items: center;
+    outline: 1px solid black;
+    border-radius: 20px 20px 20px 20px;
+    width: 400px;
+    height: 100px;
     overflow: hidden;
+    margin: auto;
+    background-color: white;
+  }
+  
+  .menu-item-card:hover{
     span{
-        width: 00px;
-        height: 75px;
-        position: relative;
-        right: -100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #99E2D0;
-        border-radius: 0 10px 10px 0;
-        svg{
-            height: 30px;
-            width:30px;
-            -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
-            filter: invert(100%);
-            height: 20px;
-
-        }    
+      width: 100px;
+      transform: translateX(0px);
+      svg{
+        transform: rotate(720deg);
+      }
     }
-    
-}
-
-.menu-item-card:hover{
-    span{
-        width: 100px;
-        transform: translateX(-100px);
-        right: -100px;
-        animation: do_shift 1s linear;
-        svg{
-            /* transform: rotate(-360deg); */
-            animation:do_rotate 2s linear;
-        }
-    }
-}
-
-.menu-item-text{
+  }
+  
+  .menu-item-card span{
+    height: 100px;
+    width: 00px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100px);
+    transition: transform 0.5s ease-in-out;
+    background-color: aquamarine;
+  }
+  
+  .menu-item-card span svg{
+    height: 30px;
+    width: 30px;
+    filter:invert(100%);
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(0deg);
+    border-radius: 50px 50px 50px 50px;
+    color: aquamarine;
+  }
+  
+  .menu-item-text{
     display: flex;
     flex-direction: column;
-}
-
-.menu-item-title{
-    font-size: 20px;
-    font-weight: bold;
-    height: 50%;
-    padding:0 10px;
-}
-
-.span-container{
- width: 100px;   
-}
-
-.menu-item-description-price{
+    width: 300px;
+    height: 100px;
+  }
+  
+  .menu-item-description-price{
     display: flex;
-    flex-direction: row;
-    height: 20px;
     justify-content: space-between;
-    padding:0 10px;
-    align-items: center;
-}
-
+  }
+  
+  .menu-item-title {
+    padding-left: 10px;
+  
+  }
+  
+  .menu-item-description-price p{
+    padding-left:10px;
+    padding-right: 10px;
+  }
+  
 .gradient-button-container{
     display: flex;
     flex-direction: column;
@@ -108,35 +106,3 @@ body{
 
 }
 
-@keyframes do_shift {
-    0% {
-      transform: translate(10px);
-    }
-    50% {
-      transform: translate(75px);
-    }
-    100%{
-        transform: translate(125px);
-    }
-  }
-
-@keyframes do_rotate {
-0% {
-    transform: rotate(0deg);
-}
-50% {
-    transform: rotate(180deg);
-}
-100%{
-    transform: rotate(360deg);
-}
-}
-
-@keyframes do_fade_in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}

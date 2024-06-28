@@ -108,4 +108,13 @@ body {
   padding: 30px;
 }
 
+@keyframes do_fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*# sourceMappingURL=menu_style.css.map */

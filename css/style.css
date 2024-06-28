@@ -88,6 +88,7 @@ body{
     font-weight: bold;
     text-align: left;
     padding: 30px;
+    position: relative;
     svg{
         width: 20px;
         height: 30px;
@@ -97,6 +98,19 @@ body{
 
 }
 
+.work-step{
+    height: 40px;
+    width: 40px;
+    background-color: #9356DC;
+    border-radius: 50px 50px 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left:-20px;    
+    color:white;
+  }
 
 .restaurants{
     padding: 30px;

@@ -1,3 +1,9 @@
+:root{
+  --span-width: 80px;
+  --menu-item-card-heigth:80px;
+}
+
+
 body{
     animation: do_fade_in 3s 1 forwards
 }
@@ -34,18 +40,18 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline: 1px solid black;
     border-radius: 20px 20px 20px 20px;
-    width: 400px;
-    height: 100px;
+    width: 90%;
+    height: var(--menu-item-card-heigth);
     overflow: hidden;
-    margin: auto;
+    margin: 10px auto; 
+    padding:0;
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px inset;
   }
   
   .menu-item-card:hover{
     span{
-      width: 100px;
       transform: translateX(0px);
       svg{
         transform: rotate(720deg);
@@ -54,14 +60,14 @@ body{
   }
   
   .menu-item-card span{
-    height: 100px;
-    width: 00px;
+    height: inherit;
+    width: var(--span-width);
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(100px);
+    transform: translateX(var(--span-width));
     transition: transform 0.5s ease-in-out;
-    background-color: aquamarine;
+    background-color: #99E2D0;
   }
   
   .menu-item-card span svg{
@@ -77,10 +83,11 @@ body{
   .menu-item-text{
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: inherit;
+    outline:1px solid blue;
   }
-  
+
   .menu-item-description-price{
     display: flex;
     justify-content: space-between;
@@ -88,12 +95,13 @@ body{
   
   .menu-item-title {
     padding-left: 10px;
-  
+    outline:1px solid red;
   }
   
   .menu-item-description-price p{
     padding-left:10px;
     padding-right: 10px;
+    outline: 1px solid red;;
   }
   
 .gradient-button-container{

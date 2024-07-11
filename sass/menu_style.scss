@@ -1,3 +1,91 @@
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+:root{
+  --span-width: 80px;
+  --menu-item-card-heigth:100px;
+}
+
+
+body{
+    animation: do_fade_in 3s 1 forwards
+}
+
 .menu-logo--container{
     position: relative;
     z-index: 10;
@@ -29,65 +117,71 @@
 .menu-item-card{
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    height: 75px;
-    transition: translate 1000ms ease-in-out 0.25s;
+    align-items: center;
+    border-radius: 20px 20px 20px 20px;
+    width: 90%;
+    height: var(--menu-item-card-heigth);
     overflow: hidden;
+    margin: 10px auto; 
+    padding:0;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px inset;
+  }
+  
+  .menu-item-card:hover{
     span{
-        width: 00px;
-        height: 75px;
-        position: relative;
-        right: -100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: lightcoral;
-        border-radius: 0 10px 10px 0;
-        svg{
-            height: 30px;
-            width:30px;
-        }    
+      transform: translateX(0px);
+      svg{
+        transform: rotate(720deg);
+      }
     }
-    
-}
-
-.menu-item-card:hover{
-    span{
-        width: 100px;
-        transform: translateX(-100px);
-        right: -100px;
-        svg{
-            transform: rotate(-360deg);
-        }
-    }
-}
-
-.menu-item-text{
+  }
+  
+  .menu-item-card span{
+    height: inherit;
+    width: var(--span-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(var(--span-width));
+    transition: transform 0.5s ease-in-out;
+    background-color: #99E2D0;
+  }
+  
+  .menu-item-card span svg{
+    height: 30px;
+    width: 30px;
+    filter:invert(100%);
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(0deg);
+    border-radius: 50px 50px 50px 50px;
+    color: aquamarine;
+  }
+  
+  .menu-item-text{
     display: flex;
     flex-direction: column;
-}
+    width: 90%;
+    height: 100%;
+  }
 
-.menu-item-title{
-    font-size: 20px;
-    font-weight: bold;
-    height: 50%;
-    padding:0 10px;
-}
-
-.span-container{
- width: 100px;   
-}
-
-.menu-item-description-price{
+  .menu-item-description-price{
     display: flex;
-    flex-direction: row;
-    height: 20px;
     justify-content: space-between;
-    padding:0 10px;
-    align-items: center;
-}
-
+    margin-bottom: 10px;
+  }
+  
+  .menu-item-title {
+    padding-left: 10px;
+    height: 20%;
+  }
+  
+  .menu-item-description-price p{
+    padding-left:10px;
+    padding-right: 10px;
+    height: 50%;
+  }
+  
 .gradient-button-container{
     display: flex;
     flex-direction: column;
@@ -96,4 +190,13 @@
     justify-content: center;
     padding:30px;
 
+}
+
+@keyframes do_fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

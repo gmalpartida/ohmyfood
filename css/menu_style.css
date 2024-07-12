@@ -100,7 +100,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px;
+  /*     padding: 20px;
+   */
   border-radius: 50px 50px 0px 0px;
   margin-top: -100px;
   position: relative;
@@ -110,6 +111,13 @@ body {
 .menu-title {
   font-style: italic;
   text-align: center;
+  font-size: 1.5em;
+}
+
+.menu-sub-title {
+  font-size: 1.5em;
+  width: 90%;
+  margin: auto;
 }
 
 .menu-item-card {
@@ -168,14 +176,14 @@ body {
 }
 
 .menu-item-title {
-  padding-left: 10px;
-  height: 20%;
+  padding: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .menu-item-description-price p {
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 50%;
+  padding: 10px;
+  font-size: 1.25em;
 }
 
 .gradient-button-container {
@@ -183,12 +191,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 50px;
 }
 
 @keyframes do_fade_in {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;

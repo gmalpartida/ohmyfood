@@ -156,17 +156,12 @@ body{
 .restaurant-list{
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    width: 90%;
-=======
-    justify-content: space-around;
-    gap: 20px;
->>>>>>> 51a085185c490df8ebf735d8e6b9e48cf2847746
     margin: auto;
     background-color: lightgray;
     padding-bottom: 50px;
     padding-top: 50px;
 }
+
 .restaurant-card{
     width: 90%;
     display: flex;
@@ -180,6 +175,7 @@ body{
         color: black;
     }
 }
+
 .restaurant-card img{
     /* display: block; */
     width: 100%;
@@ -196,28 +192,17 @@ body{
     display: flex;
     flex-direction: column;
     width: 90%;
-    justify-content: space-between;
 }
 .restaurant-card__description--name{
-<<<<<<< HEAD
     font-size: 2em;
     font-weight: 700;
-    padding-left: 10px;
+    padding: 20px;
 }
 
 .restaurant-card__description--city{
-    font-size: 2em;
-    padding-left: 10px;
-=======
     font-size: 1.5em;
     font-weight: 600;
-    padding: 10px;
-}
-
-.restaurant-card__description--city{
-    padding: 10px;
-    font-size: 1.25em;
->>>>>>> 51a085185c490df8ebf735d8e6b9e48cf2847746
+    padding: 20px;
 }
 
 .restaurant-card__description--favorite{
@@ -227,6 +212,12 @@ body{
     width: 20%;
     svg{
         width: 50%;
+    }
+}
+
+.restaurant-card__description--favorite:hover{
+    svg{
+        fill:url(#heart-gradient);
     }
 }
 

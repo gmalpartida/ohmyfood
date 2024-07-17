@@ -83,11 +83,13 @@
 
 body {
   animation: do_fade_in 3s 1 forwards;
+  font-family: "Roboto", sans-serif;
 }
 
 .menu-logo--container {
   position: relative;
   z-index: 10;
+  font-family: "Shrikhand", serif;
 }
 .menu-logo--container img {
   object-fit: cover;
@@ -96,10 +98,10 @@ body {
 }
 
 .menu-container {
-  background-color: lightgray;
+  background-color: rgb(238, 235, 235);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   /*     padding: 20px;
    */
   border-radius: 50px 50px 0px 0px;
@@ -108,10 +110,23 @@ body {
   z-index: 20;
 }
 
+.menu-title-heart {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+}
+.menu-title-heart span {
+  width: 60px;
+}
+.menu-title-heart span svg {
+  width: 50%;
+}
+
 .menu-title {
   font-style: italic;
-  text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
+  font-family: "Shrikhand", serif;
 }
 
 .menu-sub-title {
@@ -183,6 +198,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 50px;
+  background-color: rgb(238, 235, 235);
 }
 
 @keyframes do_fade_in {

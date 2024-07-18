@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --heart-container-width:100px;
+    --heart-container-display:flex;
+    --heart-container-flex-direction:column;
 }
 
 body{
@@ -311,3 +314,45 @@ body{
     border: 1px solid #888;
     width: 50%;
   }
+
+  .heart-animation{
+    width: var(--heart-container-width);
+    display:var(--heart-container-display);
+    flex-direction: var(--heart-container-flex-direction);
+    svg{
+        width: 50%;
+        stroke-width: 2px;
+        fill:transparent;
+        stroke-width: 20;
+        stroke:black;
+        stroke-dasharray: 1550;
+        stroke-dashoffset: 0;
+    }
+    p{
+        display: inline;
+    }
+}
+
+.heart-animation:hover{
+    svg{
+        animation: animate-heart3 2s linear forwards;
+    }
+}
+
+@keyframes animate-heart3 {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1550;
+        fill:transparent;
+    }
+    80%{
+        stroke-dashoffset: 3100;
+        fill:url(#heart2-gradient);
+    }
+    100%{
+        stroke-dashoffset: 3100;
+        fill:url(#heart2-gradient);
+    }
+}

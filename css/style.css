@@ -177,11 +177,12 @@ body{
     background-color: #99E2D0;
     position:absolute;
     top:5%;
-    left:80%;
-    width: 80px;
-    padding: 5px;
+    right:10px;
+    width: 100px;
     border:none;
     color: green;
+    text-align: center;
+    padding:10px;
 }
 
 .restaurant-card img{
@@ -268,12 +269,6 @@ body{
     
 }
 
-@keyframes heart-fill {
-    to{
-        fill:url(#heart-gradient);
-    }
-}
-
 @keyframes spinner {
     to {transform: rotate(360deg);}
   }
@@ -349,10 +344,10 @@ body{
     }
     80%{
         stroke-dashoffset: 3100;
-        fill:url(#heart2-gradient);
+        fill:url(#heart-gradient);
     }
     100%{
         stroke-dashoffset: 3100;
-        fill:url(#heart2-gradient);
+        fill:url(#heart-gradient);
     }
 }

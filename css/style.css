@@ -21,23 +21,27 @@ body{
     position: relative;
     height: 70px;
     padding:10px;
-    button{
-        background-color: transparent;
-        border: none;
-        width:100px;
-        padding:10px;
-        font-size: x-large;
-
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);        
-    }
-    img{
-        width: 50%;
-    }
     font-family: "Shrikhand", serif;
+}
+
+.header-logo-container a{
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    width:100px;
+    padding:10px;
+    font-size: x-large;
+
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);        
+}
+
+.header-logo-container img{
+    width: 50%;
 }
 
 .location-icon{
@@ -54,12 +58,13 @@ body{
     background-color: rgb(225, 225, 225);
     box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px inset;
     height: 55px;
-    h3{
-/*         font-family: "Shrikhand", serif;
-        font-size: 0.9em;
- */    }
 }
 
+.location h3{
+    /*         font-family: "Shrikhand", serif;
+            font-size: 0.9em;
+     */    }
+    
 .book{
     display: flex;
     flex-direction: column;
@@ -100,13 +105,15 @@ body{
     display: flex;
     flex-direction: column;
     height: 485px;
-    p{
-        padding:30px;
-        font-size:28px;
-        height: 110px;
-        font-family: "Shrikhand", serif;
-    }
 }
+
+.works p{
+    padding:30px;
+    font-size:28px;
+    height: 110px;
+    font-family: "Shrikhand", serif;
+}
+
 .works-buttons{
     display: flex;
     flex-direction: column;
@@ -125,13 +132,14 @@ body{
     text-align: left;
     padding: 10px;
     position: relative;
-    svg{
-        width: 20px;
-        height: 30px;
-        margin:20px;
-    }
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+}
+
+.button-work svg{
+    width: 20px;
+    height: 30px;
+    margin:20px;
 }
 
 .work-step{
@@ -167,10 +175,11 @@ body{
     background-color: white;
     margin-bottom: 20px;
     position:relative;
-    a {
-        text-decoration: none;
-        color: black;
-    }
+}
+
+.restaurant-card a {
+    text-decoration: none;
+    color: black;
 }
 
 .new-button{
@@ -219,16 +228,16 @@ body{
     justify-content: center;
     align-items: center;
     width: 20%;
-    svg{
-        width: 50%;
-    }
 }
 
-.restaurant-card__description--favorite:hover{
-    svg{
+.restaurant-card__description--favorite svg{
+    width: 50%;
+}
+
+.restaurant-card__description--favorite:hover svg{
+
         animation: heart-fill 3s ease-in-out;
         /* fill:url(#heart-gradient); */
-    }
 }
 
 .restaurant-list-title{
@@ -248,25 +257,27 @@ body{
     padding-left: 5%;
     padding-top: 20px;
     gap: 10px;
-    svg {
-        -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
-                filter: invert(100%);
-        }
 }
 
-.footer-items-list{
-    list-style: none;
-    li{
-        display: flex;
-        flex-direction: row;
-        justify-content:left;
-        svg{
-            width: 30px;
-            padding-right: 10px;
-        }
-        height: 30px;
+.footer-container svg {
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+            filter: invert(100%);
     }
-    
+
+.footer-items-list{
+    list-style: none;    
+}
+
+.footer-items-list li{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    height: 30px;
+}
+
+.footer-items-list li svg{
+    width: 30px;
+    padding-right: 10px;
 }
 
 @keyframes spinner {
@@ -323,24 +334,26 @@ body{
     width: var(--heart-container-width);
     display:var(--heart-container-display);
     flex-direction: var(--heart-container-flex-direction);
-    svg{
-        width: 50%;
-        stroke-width: 2px;
-        fill:transparent;
-        stroke-width: 20;
-        stroke:black;
-        stroke-dasharray: 1550;
-        stroke-dashoffset: 0;
-    }
-    p{
-        display: inline;
-    }
 }
 
-.heart-animation:hover{
-    svg{
+.heart-animation svg{
+    width: 50%;
+    stroke-width: 2px;
+    fill:transparent;
+    stroke-width: 20;
+    stroke:black;
+    stroke-dasharray: 1550;
+    stroke-dashoffset: 0;
+}
+
+.heart-animation p{
+    display: inline;
+}
+
+.heart-animation:hover svg{
+    
         animation: animate-heart3 2s linear forwards;
-    }
+    
 }
 
 @keyframes animate-heart3 {

@@ -45,17 +45,34 @@ body{
   }
 }
 
-.menu-title{
-    font-style: italic;
-    font-size: 1.5em;
-    font-family: "Shrikhand", serif;
+.menu-sub-title{
+  font-weight: 400;
 }
 
-.menu-sub-title{
-  font-size: 1.5em;
+.menu-sub-title--underline{
+  display:flex;
+  flex-direction: column;
   width: 90%;
   margin: auto;
 }
+
+.menu-title{
+/*     font-style: italic;
+    font-size: 1.5em;
+ */    font-family: "Shrikhand", serif;
+ font-weight: 500;
+}
+
+.menu-sub-title__underline{
+  width: 60px; 
+  height: 5px; 
+  border-top: solid; 
+  line-height: 80%; 
+  color: lightgreen;
+  /* font-size: 1.5em; */
+/*   width: 90%;
+  margin: auto;
+ */}
 
 .menu-item-card{
     display: flex;
@@ -105,8 +122,14 @@ body{
   .menu-item-description-price{
     display: flex;
     justify-content: space-between;
+    p{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
   
+
   .menu-item-title {
     font-size: 1.5em;
     font-weight: 600;

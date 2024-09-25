@@ -24,6 +24,10 @@ body{
     font-family: "Shrikhand", serif;
 }
 
+.header-logo-container i{
+    background-color: red;
+}
+
 .header-logo-container a{
     color: black;
     text-decoration: none;
@@ -71,9 +75,9 @@ body{
 }
 
 .book-title{
-    font-size:28px;
+    /* font-size:28px;
     height: 75px;
-    padding-top: 20px;
+    padding-top: 20px; */
     font-family: "Shrikhand", serif;
 }
 
@@ -166,14 +170,28 @@ body{
     font-size: 16px;
   }
 
+  .restaurant-section{
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 235, 235);
+  }
+
+.restaurant-page__sub-title{
+    padding: 20px; 
+    margin-left: 30px;
+/*     outline: 1px solid red;
+ */
+} 
+
 .restaurant-list{
     display: flex;
     flex-direction: column;
     margin: auto;
-    background-color: rgb(238, 235, 235);
-    padding-bottom: 50px;
+
+/*     padding-bottom: 50px;
     padding-top: 50px;
-}
+ */}
 
 .restaurant-card{
     box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px inset;
@@ -411,4 +429,5 @@ body{
         min-width: 350px;
         max-width: 450px;
     } 
+
 }

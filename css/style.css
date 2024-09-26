@@ -19,13 +19,9 @@ body{
     display: flex;
     justify-content: center;
     position: relative;
-    height: 70px;
+    max-height: 70px;
     padding:10px;
     font-family: "Shrikhand", serif;
-}
-
-.header-logo-container i{
-    background-color: red;
 }
 
 .header-logo-container a{
@@ -33,19 +29,15 @@ body{
     text-decoration: none;
     background-color: transparent;
     border: none;
-    width:100px;
-    padding:10px;
+    width:25px;
+    /* padding:10px; */
     font-size: x-large;
 
     position: absolute;
     top: 50%;
-    left: 5%;
+    left: 30px;
     transform: translate(-50%, -50%);
     /* -ms-transform: translate(-50%, -50%);         */
-}
-
-.header-logo-container img{
-    width: 50%;
 }
 
 .location-icon{
@@ -60,7 +52,7 @@ body{
     align-items: center;
     gap:10px;
     background-color: rgb(225, 225, 225);
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px;
     height: 55px;
 }
 
@@ -90,7 +82,7 @@ body{
 .gradient-button{
     border-radius: 50px 50px 50px 50px;
     border-style: none;
-    background-color:darkorchid;
+    background-color:#9356DC;
     height: 55px;
     font-size: 18px;
     padding:10px;
@@ -98,6 +90,12 @@ body{
     width: 250px;
     color: white;
     font-weight: 550;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.gradient-button:hover{
+    background-image: linear-gradient(to top left, #9356DC, #FFA0DA);
+    box-shadow: rgba(0, 0, 0, 0.24) 2px 5px 8px;
 }
 
 .works{
@@ -115,7 +113,7 @@ body{
 
 .works p {
     padding:30px;
-    font-size:28px;
+    font-size:28px; 
     height: 110px;
     font-family: "Shrikhand", serif;
 }
@@ -124,7 +122,7 @@ body{
     display: flex;
     flex-direction: column;
     gap:30px;
-    padding: 0 40px;
+    /* padding: 0 40px; */
 }
 
 .button-work{
@@ -138,12 +136,31 @@ body{
     text-align: left;
     padding: 10px;
     position: relative;
-    width: 600px;
+    width: 90%;
+    margin:auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
 }
 
-.button-work svg{
+.button-work__enjoy{
+    display: flex;
+    align-items: center;
+    border-radius: 30px 30px 30px 30px;
+    border-style: none;
+    height: 80px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #f5e6f0;
+    width: 90%;
+    margin:auto;
+}
+
+.button-work__enjoy svg{
+    fill: #9356DC;
     width: 20px;
     height: 30px;
     margin:20px;
@@ -194,7 +211,7 @@ body{
  */}
 
 .restaurant-card{
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -229,7 +246,7 @@ body{
     object-fit: cover;
     /* margin: auto; */
     border-radius: 10px 10px 0 0;
-    max-height: 300px;
+    max-height: 200px;
 }
 .restaurant-card__description{
     display: flex;
@@ -430,4 +447,7 @@ body{
         max-width: 450px;
     } 
 
+    .restaurant-card img{
+        max-height: 350px;
+    }
 }

@@ -5,7 +5,7 @@
 
 
 body{
-    animation: do_fade_in 3s 1 forwards;
+    /* animation: do_fade_in 3s 1 forwards; */
     font-family: "Roboto", sans-serif;
 }
 
@@ -26,7 +26,8 @@ body{
     flex-direction: column;
     gap:20px;
 /*     padding: 20px;
- */    border-radius: 50px 50px 0px 0px;
+ */    
+ border-radius: 50px 50px 0px 0px;
     margin-top: -100px;
     position: relative;
     z-index: 20;
@@ -80,7 +81,7 @@ body{
     border-radius: 20px 20px 20px 20px;
     overflow: hidden;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px;
     width: 90%;
     margin: auto;
   }

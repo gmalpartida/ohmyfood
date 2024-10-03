@@ -1,12 +1,14 @@
 :root{
   --span-width: 80px;
   --menu-item-card-heigth:100px;
+  --header-font-family:"Shrikhand", serif;
+  --default-font-family: "Roboto", sans-serif;
 }
 
 
 body{
-    /* animation: do_fade_in 3s 1 forwards; */
-    font-family: "Roboto", sans-serif;
+    animation: do_fade_in 3s 1 forwards;
+    font-family: var(--default-font-family)
 }
 
 .menu-logo--container{
@@ -17,7 +19,7 @@ body{
         height: auto;
         width: 100%;
     }
-    font-family: "Shrikhand", serif;
+    font-family: var(--header-font-family);
 }
 
 .menu-container{
@@ -44,6 +46,11 @@ body{
       width: 50%;
     }
   }
+}
+
+.menu-title{
+    font-style: italic;
+    font-size: 1.5em;
 }
 
 .menu-sub-title{

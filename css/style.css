@@ -6,13 +6,15 @@
     --heart-container-width:100px;
     --heart-container-display:flex;
     --heart-container-flex-direction:column;
+    --header-font-family:"Shrikhand", serif;
+    --default-font-family: "Roboto", sans-serif;
 }
 
 body{
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--default-font-family);
 }
 
 .header-logo-container{
@@ -21,7 +23,7 @@ body{
     position: relative;
     max-height: 70px;
     padding:10px;
-    font-family: "Shrikhand", serif;
+    font-family: var(--header-font-family);
 }
 
 .header-logo-container a{
@@ -55,7 +57,7 @@ body{
     box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px;
     height: 55px;
 }
-
+   
 .book{
     display: flex;
     flex-direction: column;
@@ -69,8 +71,7 @@ body{
 .book-title{
     /* font-size:28px;
     height: 75px;
-    padding-top: 20px; */
-    font-family: "Shrikhand", serif;
+    padding-top: 20px;
 }
 
 .book-sub-title{
@@ -102,20 +103,12 @@ body{
     display: flex;
     flex-direction: column;
     padding-bottom: 50px;
-    /* height: 485px; */
-/*     p {
-        padding:30px;
-        font-size:28px;
-        height: 110px;
-        font-family: "Shrikhand", serif;
-    }
- */}
+}
 
 .works p {
     padding:30px;
     font-size:28px; 
     height: 110px;
-    font-family: "Shrikhand", serif;
 }
 
 .works-buttons{
@@ -291,7 +284,6 @@ body{
     width: 90%;
     margin: auto;
     padding-bottom: 20px;
-    font-family: "Shrikhand", serif;
 }
 
 

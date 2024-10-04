@@ -69,7 +69,7 @@ body{
 }
 
 .book-title{
-    font-size:28px;
+    font-family: var(--header-font-family);
     height: 75px;
     padding-top: 20px;
 }
@@ -445,5 +445,9 @@ body{
     } 
     .restaurant-card img{
         max-height: 350px;
+    }
+
+    .restaurant-page__sub-title{
+        padding: 45px;
     }
 }

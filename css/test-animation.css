@@ -58,9 +58,12 @@ section {
   margin: auto;
 }
 
+.menu-item-card:hover .menu-item-text {
+  width: 300px;
+}
 .menu-item-card:hover span {
+  /*     width: 100px; */
   width: 100px;
-  transform: translateX(0px);
 }
 .menu-item-card:hover span svg {
   transform: rotate(720deg);
@@ -68,13 +71,12 @@ section {
 
 .menu-item-card span {
   height: 100px;
-  width: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(100px);
-  transition: transform 0.5s ease-in-out;
   background-color: aquamarine;
+  width: 0px;
+  transition: width 1s ease-in-out;
 }
 
 .menu-item-card span svg {
@@ -90,8 +92,12 @@ section {
 .menu-item-text {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  /*   width: 300px;
+   */
   height: 100px;
+  outline: 1px solid red;
+  width: 400px;
+  transition: width 1s ease-in-out;
 }
 
 .menu-item-description-price {

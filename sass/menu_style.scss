@@ -95,21 +95,25 @@ body{
   
   .menu-item-card:hover{
     span{
-      width: 75px;
-      transform: translateX(0%);
-      svg{
+      width: 15%;
+/*       transform: translateX(0%);
+ */      svg{
         transform: rotate(720deg);
       }
+    }
+    .menu-item-text{
+      width: 85%;
     }
   }
   
   .menu-item-card span{
     display: flex;
     justify-content: center;
-    transform: translateX(75px);
-    transition: transform 0.5s ease-in-out;
-    background-color: #99E2D0;
-    width: 0px;
+   /*  transform: translateX(75px); */
+/*     transition: transform 0.5s ease-in-out;
+ */    background-color: #99E2D0;
+    width: 0%;
+    transition: width 1s ease-in-out;
   }
   
   .menu-item-card span svg{
@@ -125,18 +129,19 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
+    transition: width 1s ease-in-out;
   }
 
   .menu-item-description-price{
     display: flex;
     justify-content: space-between;
-    p{
+  }
+  
+  .menu-item-description{
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-    }
   }
-  
 
   .menu-item-title {
     font-size: 1.5em;
@@ -175,4 +180,20 @@ body{
   100% {
     opacity: 1;
   }
+}
+
+@media only screen and (min-width: 768px){
+  .menu-item-card:hover{
+    span{
+      width: 10%;
+/*       transform: translateX(0%);
+ */      svg{
+        transform: rotate(720deg);
+      }
+    }
+    .menu-item-text{
+      width: 90%;
+    }
+  }
+
 }

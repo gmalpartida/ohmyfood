@@ -306,9 +306,6 @@ body{
     list-style: none;    
 }
 
-.footer-items-list li{
-}
-
 .footer-items-list li svg{
     width: 30px;
     padding-right: 10px;
@@ -387,6 +384,9 @@ body{
     stroke:black;
     stroke-dasharray: 1550;
     stroke-dashoffset: 0;
+    transition:fill 2s ease-in-out;
+    fill-opacity: calc(0);
+    transition: fill-opacity 2s ease-in-out;
 }
 
 .heart-animation p{
@@ -396,24 +396,26 @@ body{
 .heart-animation:hover svg{
     
         animation: animate-heart3 2s linear forwards;
+        fill:url(#heart-gradient);
+        fill-opacity: calc(1);
     
 }
 
 @keyframes animate-heart3 {
     0%{
         stroke-dashoffset: 0;
+
     }
     40%{
         stroke-dashoffset: 1550;
-        fill:transparent;
     }
     80%{
         stroke-dashoffset: 3100;
-        fill:url(#heart-gradient);
+/*         fill:url(#heart-gradient); */
     }
     100%{
         stroke-dashoffset: 3100;
-        fill:url(#heart-gradient);
+/*         fill:url(#heart-gradient); */
     }
 }
 

@@ -6,22 +6,24 @@
     --heart-container-width:100px;
     --heart-container-display:flex;
     --heart-container-flex-direction:column;
+    --header-font-family:"Shrikhand", serif;
+    --default-font-family: "Roboto", sans-serif;
 }
 
 body{
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--default-font-family);
 }
 
 .header-logo-container{
     display: flex;
     justify-content: center;
     position: relative;
-    height: 70px;
+    max-height: 70px;
     padding:10px;
-    font-family: "Shrikhand", serif;
+    font-family: var(--header-font-family);
 }
 
 .header-logo-container a{
@@ -29,19 +31,15 @@ body{
     text-decoration: none;
     background-color: transparent;
     border: none;
-    width:100px;
-    padding:10px;
+    width:25px;
+    /* padding:10px; */
     font-size: x-large;
 
     position: absolute;
     top: 50%;
-    left: 5%;
+    left: 30px;
     transform: translate(-50%, -50%);
     /* -ms-transform: translate(-50%, -50%);         */
-}
-
-.header-logo-container img{
-    width: 50%;
 }
 
 .location-icon{
@@ -56,15 +54,10 @@ body{
     align-items: center;
     gap:10px;
     background-color: rgb(225, 225, 225);
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px;
     height: 55px;
 }
-
-.location h3{
-    /*         font-family: "Shrikhand", serif;
-            font-size: 0.9em;
-     */    }
-    
+   
 .book{
     display: flex;
     flex-direction: column;
@@ -76,10 +69,9 @@ body{
 }
 
 .book-title{
-    font-size:28px;
+    font-family: var(--header-font-family);
     height: 75px;
     padding-top: 20px;
-    font-family: "Shrikhand", serif;
 }
 
 .book-sub-title{
@@ -91,7 +83,7 @@ body{
 .gradient-button{
     border-radius: 50px 50px 50px 50px;
     border-style: none;
-    background-color:darkorchid;
+    background-color:#9356DC;
     height: 55px;
     font-size: 18px;
     padding:10px;
@@ -99,33 +91,31 @@ body{
     width: 250px;
     color: white;
     font-weight: 550;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.gradient-button:hover{
+    background-image: linear-gradient(to top left, #9356DC, #FFA0DA);
+    box-shadow: rgba(0, 0, 0, 0.24) 2px 5px 8px;
 }
 
 .works{
     display: flex;
     flex-direction: column;
     padding-bottom: 50px;
-    /* height: 485px; */
-/*     p {
-        padding:30px;
-        font-size:28px;
-        height: 110px;
-        font-family: "Shrikhand", serif;
-    }
- */}
+}
 
 .works p {
     padding:30px;
-    font-size:28px;
+    font-size:28px; 
     height: 110px;
-    font-family: "Shrikhand", serif;
 }
 
 .works-buttons{
     display: flex;
     flex-direction: column;
     gap:30px;
-    padding: 0 40px;
+    /* padding: 0 40px; */
 }
 
 .button-work{
@@ -139,12 +129,31 @@ body{
     text-align: left;
     padding: 10px;
     position: relative;
-    width: 600px;
+    width: 90%;
+    margin:auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
 }
 
-.button-work svg{
+.button-work__enjoy{
+    display: flex;
+    align-items: center;
+    border-radius: 30px 30px 30px 30px;
+    border-style: none;
+    height: 80px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #f5e6f0;
+    width: 90%;
+    margin:auto;
+}
+
+.button-work__enjoy svg{
+    fill: #9356DC;
     width: 20px;
     height: 30px;
     margin:20px;
@@ -171,16 +180,31 @@ body{
     font-size: 16px;
   }
 
+  .restaurant-section{
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 235, 235);
+  }
+
+.restaurant-page__sub-title{
+    padding: 20px; 
+    margin-left: 30px;
+/*     outline: 1px solid red;
+ */
+} 
+
 .restaurant-list{
     display: flex;
     flex-direction: column;
     margin: auto;
-    background-color: rgb(238, 235, 235);
-    padding-bottom: 50px;
+
+/*     padding-bottom: 50px;
     padding-top: 50px;
-}
+ */}
 
 .restaurant-card{
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -215,7 +239,7 @@ body{
     object-fit: cover;
     /* margin: auto; */
     border-radius: 10px 10px 0 0;
-    max-height: 300px;
+    max-height: 200px;
 }
 .restaurant-card__description{
     display: flex;
@@ -234,7 +258,7 @@ body{
 
 .restaurant-card__description--city{
     font-size: 1.5em;
-    font-weight: 600;
+    font-weight: 400;
     padding: 20px;
 }
 
@@ -260,7 +284,6 @@ body{
     width: 90%;
     margin: auto;
     padding-bottom: 20px;
-    font-family: "Shrikhand", serif;
 }
 
 
@@ -283,16 +306,18 @@ body{
     list-style: none;    
 }
 
-.footer-items-list li{
+.footer-items-list li svg{
+    width: 30px;
+    padding-right: 10px;
+}
+
+.footer-items-list li a{
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     justify-content:left;
     height: 30px;
-}
-
-.footer-items-list li svg{
-    width: 30px;
-    padding-right: 10px;
+    color:white;
 }
 
 @keyframes spinner {
@@ -359,6 +384,9 @@ body{
     stroke:black;
     stroke-dasharray: 1550;
     stroke-dashoffset: 0;
+    transition:fill 2s ease-in-out;
+    fill-opacity: calc(0);
+    transition: fill-opacity 2s ease-in-out;
 }
 
 .heart-animation p{
@@ -368,24 +396,26 @@ body{
 .heart-animation:hover svg{
     
         animation: animate-heart3 2s linear forwards;
+        fill:url(#heart-gradient);
+        fill-opacity: calc(1);
     
 }
 
 @keyframes animate-heart3 {
     0%{
         stroke-dashoffset: 0;
+
     }
     40%{
         stroke-dashoffset: 1550;
-        fill:transparent;
     }
     80%{
         stroke-dashoffset: 3100;
-        fill:url(#heart-gradient);
+/*         fill:url(#heart-gradient); */
     }
     100%{
         stroke-dashoffset: 3100;
-        fill:url(#heart-gradient);
+/*         fill:url(#heart-gradient); */
     }
 }
 
@@ -410,4 +440,16 @@ body{
         min-width: 350px;
         max-width: 450px;
     } 
+
+    .button-work__enjoy{
+        min-width: 350px;
+        max-width: 450px;
+    } 
+    .restaurant-card img{
+        max-height: 350px;
+    }
+
+    .restaurant-page__sub-title{
+        padding: 45px;
+    }
 }

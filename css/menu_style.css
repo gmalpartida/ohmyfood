@@ -1,17 +1,19 @@
 :root {
   --span-width: 80px;
   --menu-item-card-heigth:100px;
+  --header-font-family:"Shrikhand", serif;
+  --default-font-family: "Roboto", sans-serif;
 }
 
 body {
-  animation: do_fade_in 3s 1 forwards;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--default-font-family);
+  background-attachment: fixed;
 }
 
 .menu-logo--container {
   position: relative;
   z-index: 10;
-  font-family: "Shrikhand", serif;
+  font-family: var(--header-font-family);
 }
 .menu-logo--container img {
   object-fit: cover;
@@ -32,6 +34,10 @@ body {
   z-index: 20;
 }
 
+.menu-container div {
+  animation: do_fade_in 3s 1 forwards;
+}
+
 .menu-title-heart {
   display: flex;
   justify-content: space-between;
@@ -48,13 +54,37 @@ body {
 .menu-title {
   font-style: italic;
   font-size: 1.5em;
-  font-family: "Shrikhand", serif;
 }
 
 .menu-sub-title {
-  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.menu-sub-title--underline {
+  display: flex;
+  flex-direction: column;
   width: 90%;
   margin: auto;
+}
+
+.menu-title {
+  /*     font-style: italic;
+      font-size: 1.5em;
+   */
+  font-family: "Shrikhand", serif;
+  font-weight: 500;
+}
+
+.menu-sub-title__underline {
+  width: 60px;
+  height: 5px;
+  border-top: solid;
+  line-height: 80%;
+  color: lightgreen;
+  /* font-size: 1.5em; */
+  /*   width: 90%;
+    margin: auto;
+   */
 }
 
 .menu-item-card {
@@ -63,26 +93,32 @@ body {
   border-radius: 20px 20px 20px 20px;
   overflow: hidden;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 4px 0px;
   width: 90%;
   margin: auto;
 }
 
 .menu-item-card:hover span {
-  width: 75px;
-  transform: translateX(0%);
+  width: 15%;
+  /*       transform: translateX(0%);
+   */
 }
 .menu-item-card:hover span svg {
   transform: rotate(720deg);
+}
+.menu-item-card:hover .menu-item-text {
+  width: 85%;
 }
 
 .menu-item-card span {
   display: flex;
   justify-content: center;
-  transform: translateX(75px);
-  transition: transform 0.5s ease-in-out;
+  /*  transform: translateX(75px); */
+  /*     transition: transform 0.5s ease-in-out;
+   */
   background-color: #99E2D0;
-  width: 0px;
+  width: 0%;
+  transition: width 1s ease-in-out;
 }
 
 .menu-item-card span svg {
@@ -98,11 +134,18 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  transition: width 1s ease-in-out;
 }
 
 .menu-item-description-price {
   display: flex;
   justify-content: space-between;
+}
+
+.menu-item-description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu-item-title {
@@ -114,6 +157,10 @@ body {
 .menu-item-description-price p {
   font-size: 1.25em;
   padding: 10px;
+}
+
+.menu-item-price--font {
+  font-weight: 700;
 }
 
 .gradient-button-container {
@@ -128,12 +175,32 @@ body {
 @keyframes do_fade_in {
   0% {
     opacity: 0;
+    transform: scale(0.6) translateY(-100px);
+  }
+  25% {
+    opacity: 0.25;
   }
   50% {
     opacity: 0.5;
   }
+  75% {
+    opacity: 0.75;
+  }
   100% {
     opacity: 1;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .menu-item-card:hover span {
+    width: 10%;
+    /*       transform: translateX(0%);
+     */
+  }
+  .menu-item-card:hover span svg {
+    transform: rotate(720deg);
+  }
+  .menu-item-card:hover .menu-item-text {
+    width: 90%;
   }
 }
 
